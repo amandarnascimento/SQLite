@@ -1,3 +1,5 @@
+#Criei o arquivo bancodedados.db no vs, abri no SQLite, inseri as colunas por lá
+
 #1
 import sqlite3 as sql 
 
@@ -17,13 +19,13 @@ cursor.execute("INSERT INTO tabela (nome, idade, telefone) VALUES ('Maria', 52, 
 #cursor.execute("UPDATE tabela SET nome = 'Joana' WHERE nome = 'Amanda'")
 
 #Consultar dados de nome e idade
-#dados = cursor.execute("SELECT nome, idade FROM tabela").fetchall()
-#for dado in dados:
-#    print(f"Nome: {dado[0]}")
-#    print(f"Idade: {dado[1]}\n") 
+dados = cursor.execute("SELECT nome, idade FROM tabela").fetchall()
+for dado in dados:
+    print(f"Nome: {dado[0]}")
+    print(f"Idade: {dado[1]}\n") 
 
-7 Commitar/Enviar as informações ao banco de dados
-#conexao.commit()
+#7 Commitar/Enviar as informações ao banco de dados
+conexao.commit()
 
 #3 fechar a conexao com o banco de dados
 conexao.close
